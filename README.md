@@ -9,13 +9,21 @@ composer install
 php artisan migrate
 ```
 ```bash
+copy .env.example .env o cp .env.example .env
+```
+```bash
 php artisan serve
 ```
 
 # Endpoints
-- api/auth/login
-- api/auth/register
-- api/auth/logout
-- api/user
-- api/posts
-- api/posts/{id}
+- api/auth/register **(POST)**
+    - **Campos**: name, email, password
+
+- api/auth/login **(POST)**
+    - **Campos**: email, password
+- api/auth/logout **(POST)**
+
+- api/user **(GET)**
+- api/posts **(GET/POST)**
+    - **Campos**: title, body
+- api/posts/{id} **(GET/PUT/DELETE)**
